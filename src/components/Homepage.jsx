@@ -4,6 +4,8 @@ import { Typography, Row, Col, Statistic } from 'antd';
 import { Link } from 'react-router-dom';
 
 import Countries from './Countries';
+import News from './News';
+
 import { useGetCovidQuery } from '../services/covidApi';
 
 const {Title} = Typography;
@@ -26,10 +28,15 @@ const Homepage = () => {
                 <Col span={12}><Statistic title="Critical" value={millify(critical)}/></Col>
             </Row>
             <div className='home-heading-container'>
-                <Title level={2} className='home-title'>Covid-19 for each continent</Title>
+                <Title level={2} className='home-title'>Covid-19 Daily Numbers</Title>
                 <Title level={3} className='show-more'><Link to="/countries">Show more</Link></Title>
             </div>
             <Countries/>
+            <div className='home-heading-container'>
+                <Title level={2} className='home-title'>Recent Covid-19 News</Title>
+                <Title level={3} className='show-more'><Link to="/news">Show more</Link></Title>
+            </div>
+            <News/>
 
         </>
     )
