@@ -19,9 +19,6 @@ const Navbar = () => {
             </div>
             <div>
                 <Menu theme='dark'>
-                    <Menu.Item key={1}  icon={<HomeOutlined/>}>
-                        <Link to='/'>Home</Link>
-                    </Menu.Item>
                     <Menu.Item key={2} icon={<FaRegFlag/>}>
                         <Link to='/countries'>Countries</Link>
                     </Menu.Item>
